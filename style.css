@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jura&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  width: 100%;
+}
+
+body {
+  background-color: #121212;
+  min-height: 100vh;
+}
+
+#myBtn {
+  position: fixed;
+  opacity: 0;
+  top: 90%;
+  left: 95%;
+  z-index: 2000;
+  background-color: transparent;
+  border: none;
+  transition: 0.5s;
+}
+#myBtn:hover {
+  transform: scale(1.2);
+}
+
+.fa-solid.fa-angles-up {
+  color: white;
+  font-size: 40px;
+}
+
+header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 30px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  font-family: "Righteous";
+}
+
+.logo {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul li {
+  list-style: none;
+  margin-left: 10px;
+  font-size: 20px;
+}
+ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 20px;
+}
+ul li a:hover {
+  background-color: white;
+  color: #121212;
+  border-radius: 30px;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  font-family: "Jura";
+}
+section .bg img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: screen;
+}
+
+#home::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top, #121212, transparent);
+  z-index: 50;
+}
+
+#about {
+  color: white;
+  padding: 0 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#about img {
+  width: 100%;
+  border-radius: 100%;
+  margin-bottom: 30px;
+}
+#about .me {
+  padding: 40px 0px;
+  padding-left: 30px;
+}
+#about h1 {
+  font-size: 3.5vw;
+  margin-bottom: 40px;
+  padding-left: 10%;
+}
+#about p {
+  padding-left: 10%;
+  font-size: 1.5vw;
+  text-indent: 2em;
+  line-height: 2;
+  letter-spacing: 2px;
+}
+#about .name {
+  font-size: 3vw;
+}
+
+#works {
+  color: white;
+  padding: 50px 150px;
+  height: 100%;
+}
+#works .work_frame {
+  position: relative;
+  width: 100%;
+  padding: 50px 50px;
+  display: flex;
+  align-items: start;
+  margin-bottom: 30px;
+  border-radius: 100px 30px;
+  background: rgba(158, 158, 158, 0.5);
+}
+#works .w_left img {
+  width: 350px;
+  height: 200px;
+}
+#works .w_right {
+  padding-left: 30px;
+}
+#works .w_right h1 {
+  margin-bottom: 10px;
+  font-size: 2vw;
+}
+#works .w_right p {
+  font-size: 1.3vw;
+  letter-spacing: 2px;
+}
+#works .btn {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  width: 150px;
+  background-color: #f24;
+  border-radius: 30px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  padding: 5px 10px;
+  color: white;
+  font-family: "Jura";
+  cursor: pointer;
+  transition: 0.3s;
+}
+#works .btn:hover {
+  box-shadow: 2px 2px 10px #121212;
+}
