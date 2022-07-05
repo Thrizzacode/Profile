@@ -15,6 +15,7 @@ html {
 body {
   background-color: #121212;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 #myBtn {
@@ -79,20 +80,113 @@ ul li a:hover {
 }
 
 section {
+  position: relative;
   width: 100%;
   height: 100vh;
   font-family: "Jura";
 }
-section .bg img {
+
+#title {
+  position: absolute;
+  left: 0;
+  top: 20%;
+  transform: translateX(20px);
+  font-size: 8vw;
+  color: white;
+  z-index: 1;
+  font-family: "Righteous";
+}
+
+#title2 {
+  position: absolute;
+  right: 0;
+  bottom: 20%;
+  transform: translateX(-20px);
+  font-size: 8vw;
+  color: white;
+  z-index: 1;
+  font-family: "Righteous";
+  white-space: nowrap;
+}
+
+.explore {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  font-size: 1vw;
+  color: white;
+  opacity: 0.6;
+  z-index: 60;
+  transform: scaleX(3);
+  cursor: pointer;
+  animation: explore 2s infinite;
+}
+.explore::before {
+  content: "V";
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  opacity: 0.3;
+}
+.explore::after {
+  content: "V";
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+
+@keyframes explore {
+  0% {
+    transform: translateY(-20px) scaleX(3);
+  }
+  100% {
+    transform: translateY(0) scaleX(3);
+  }
+}
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home #star {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  mix-blend-mode: screen;
 }
-
+#home .mars {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+}
+#home #mars {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+#home .spaceship {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  animation: spin 5s infinite;
+  animation-timing-function: linear;
+  z-index: 11;
+}
+#home #spaceship {
+  position: absolute;
+  z-index: 13;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 #home::before {
   content: "";
   position: absolute;
@@ -124,6 +218,7 @@ section .bg img {
   font-size: 3.5vw;
   margin-bottom: 40px;
   padding-left: 10%;
+  font-family: "Righteous";
 }
 #about p {
   padding-left: 10%;
@@ -140,6 +235,11 @@ section .bg img {
   color: white;
   padding: 50px 150px;
   height: 100%;
+}
+#works h1 {
+  font-size: 4vw;
+  margin-bottom: 30px;
+  font-family: "Righteous";
 }
 #works .work_frame {
   position: relative;
@@ -158,7 +258,7 @@ section .bg img {
 #works .w_right {
   padding-left: 30px;
 }
-#works .w_right h1 {
+#works .w_right h2 {
   margin-bottom: 10px;
   font-size: 2vw;
 }
@@ -174,6 +274,7 @@ section .bg img {
   background-color: #f24;
   border-radius: 30px;
   border: none;
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;

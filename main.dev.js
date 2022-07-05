@@ -1,6 +1,9 @@
 "use strict";
 
-var mybutton = document.getElementById("myBtn"); // When the user scrolls down 20px from the top of the document, show the button
+var mybutton = document.getElementById("myBtn");
+var stars = document.getElementById("star");
+var title = document.getElementById("title");
+var title2 = document.getElementById("title2"); // When the user scrolls down 20px from the top of the document, show the button
 
 window.onscroll = function () {
   scrollFunction();
@@ -21,3 +24,10 @@ function topFunction() {
 
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+window.addEventListener('scroll', function () {
+  var value = window.scrollY;
+  console.log(value);
+  title.style.left = value + 'px';
+  title2.style.right = value + 'px';
+});
