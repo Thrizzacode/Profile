@@ -278,12 +278,21 @@ section {
     justify-content: center;
     padding: 20px 50px;
   }
+  #about .pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #about img {
+    width: 80%;
+  }
   #about .me {
-    padding: 20 0px;
+    padding: 0;
   }
   #about h1 {
     font-size: 10vw;
     padding: 0;
+    margin-bottom: 20px;
   }
   #about p {
     font-size: 3vw;
@@ -394,6 +403,9 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  #works .w_right p {
+    font-size: 10px;
   }
   #works .btn {
     position: static;
